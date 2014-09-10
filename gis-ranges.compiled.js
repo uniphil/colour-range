@@ -12,6 +12,9 @@ var H_SKEW = -36,  // degrees
 
 
 function generateRamp(rootHue, steps) {
+  // rootHue should be a number between 0 and 360
+  // generateRamp(144, 4) => ["#9fe3bb", "#67b674", "#508539", "#3d5513"]
+
   var hStepSize = H_SKEW / (steps - 1),
       sStepSize = (S_MAX - S_MIN) / (steps - 1),
       lStepSize = (L_MAX - L_MIN) / (steps - 1);
